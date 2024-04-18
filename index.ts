@@ -1,4 +1,4 @@
-import { Plugin } from 'vite';
+import type { Plugin } from 'vite';
 import * as path from 'path';
 import { BundleFs } from './modules/fs/implementations/bundle-fs';
 import { BundleParser } from './modules/parser/implementations/bundle-parser';

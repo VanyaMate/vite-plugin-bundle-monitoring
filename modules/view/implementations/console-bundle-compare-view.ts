@@ -93,7 +93,7 @@ export class ConsoleBundleCompareView implements IBundleCompareView {
         console.log(
             `\x1b[36m%s\x1b[36m%s`,
             `${ this._item(name) }`,
-            `${ this._item(size) } kb`,
+            `${ this._item(`${ size } kb`) }`,
         );
     }
 

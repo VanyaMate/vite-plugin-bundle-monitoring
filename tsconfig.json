@@ -1,28 +1,17 @@
 {
     "compilerOptions": {
-        "target": "ES2020",
-        "useDefineForClassFields": true,
-        "lib": [
-            "ES2020"
-        ],
-        "module": "node16",
-        "skipLibCheck": true,
-        "moduleResolution": "node16",
-        "allowImportingTsExtensions": true,
+        "target": "es2017",
+        "lib": ["ESNext", "DOM", "WebWorker"],
+        "module": "ESNext",
+        "moduleResolution": "Node",
         "resolveJsonModule": true,
-        "isolatedModules": true,
-        "noEmit": true,
+        "strict": true,
+        "strictNullChecks": true,
         "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitAny": true,
-        "declaration": true,
-        "declarationMap": true,
-        "types": [
-            "@types/node"
-        ]
+        "esModuleInterop": true
     },
-    "include": [
-        "node_modules"
+    "exclude": [
+        "dist",
+        "node_modules",
     ]
 }
