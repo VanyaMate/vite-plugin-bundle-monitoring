@@ -1,6 +1,6 @@
 {
     "name": "vite-plugin-bundle-monitoring",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "Plugin for vite to monitor changes in bundle size.",
     "main": "index.js",
     "scripts": {

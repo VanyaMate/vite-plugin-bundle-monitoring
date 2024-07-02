@@ -23,5 +23,6 @@ export declare class ConsoleBundleCompareView implements IBundleCompareView {
     private _renderChangedItem;
     private _renderNewItem;
     private _header;
+    private _finish;
     private _item;
 }

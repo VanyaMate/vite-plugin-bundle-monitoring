@@ -1,14 +1,12 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", {value: true});
+Object.defineProperty(exports, "__esModule", { value: true });
 var path = require("path");
 var bundle_fs_1 = require("./modules/fs/implementations/bundle-fs");
 var bundle_parser_1 = require("./modules/parser/implementations/bundle-parser");
 var bundle_compare_1 = require("./modules/compare/implementations/bundle-compare");
 var console_bundle_compare_view_1 = require("./modules/view/implementations/console-bundle-compare-view");
-
 function default_1(options) {
-    var _a = options.compareFileDir, compareFileDir = _a === void 0 ? __dirname : _a, _b = options.compareFileName,
-        compareFileName = _b === void 0 ? 'vite-bundle-monitoring.compare.json' : _b;
+    var _a = options.compareFileDir, compareFileDir = _a === void 0 ? __dirname : _a, _b = options.compareFileName, compareFileName = _b === void 0 ? 'vite-bundle-monitoring.compare.json' : _b;
     var filesPaths = [];
     return {
         name: 'vite-plugin-bundle-monitoring',
@@ -36,6 +34,5 @@ function default_1(options) {
         },
     };
 }
-
 exports.default = default_1;
 ;

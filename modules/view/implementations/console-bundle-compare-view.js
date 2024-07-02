@@ -20,6 +20,7 @@ var ConsoleBundleCompareView = /** @class */ (function () {
         this._header('New files');
         this._renderChangedHeader();
         this._renderNew(result.newFiles);
+        this._finish();
     };
     ConsoleBundleCompareView.prototype._renderCompare = function (compared) {
         var _this = this;
@@ -51,7 +52,7 @@ var ConsoleBundleCompareView = /** @class */ (function () {
     ConsoleBundleCompareView.prototype._renderChangedItem = function (name, item) {
         console.log("\u001B[0m%s\u001B[36m%s\u001B[34m%s\u001B[".concat(item.previousSize >= item.currentSize
             ? '32'
-            : '31', "m%s\u001B[").concat(item.deltaPercent <= 0
+            : '31', "m%s\u001B[").concat(item.deltaPercent > 0
             ? '32'
             : '31', "m%s"), "".concat(this._item(name)), "".concat(this._item("".concat(item.previousSize, " kb"))), "".concat(this._item("".concat(item.currentSize, " kb"))), "".concat(this._item("".concat(item.delta, " kb"))), "".concat(this._item("".concat(item.deltaPercent, " %"))));
     };
@@ -65,6 +66,9 @@ var ConsoleBundleCompareView = /** @class */ (function () {
         var leftSpace = Math.floor(this._headerSpace / 2);
         var rightSpace = this._headerSpace - leftSpace;
         console.log("\u001B[0m%s", "".concat(this._headerFiller.repeat(leftSide)).concat(' '.repeat(leftSpace)).concat(title).concat(' '.repeat(rightSpace)).concat(this._headerFiller.repeat(rightSide)));
+    };
+    ConsoleBundleCompareView.prototype._finish = function () {
+        console.log("\u001B[0m%s", this._headerFiller.repeat(this._headerSpace));
     };
     ConsoleBundleCompareView.prototype._item = function (data) {
         return data.toString().slice(0, this._itemWidth - this._itemSpace).padEnd(this._itemWidth);
