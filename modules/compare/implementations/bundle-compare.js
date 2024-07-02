@@ -37,7 +37,7 @@ var BundleCompare = /** @class */ (function () {
                 previousSize: previousFileData.size,
                 currentSize: currentFileData.size,
                 delta: currentFileData.size - previousFileData.size,
-                deltaPercent: Number((100 - 100 / currentFileData.size * previousFileData.size).toFixed(2)),
+                deltaPercent: Number((100 - 100 / previousFileData.size * currentFileData.size).toFixed(2)),
             };
         });
         return compareResults;

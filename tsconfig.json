@@ -1,17 +1,13 @@
 {
     "compilerOptions": {
-        "target": "es2017",
-        "lib": ["ESNext", "DOM", "WebWorker"],
-        "module": "ESNext",
-        "moduleResolution": "Node",
-        "resolveJsonModule": true,
-        "strict": true,
-        "strictNullChecks": true,
-        "noUnusedLocals": true,
-        "esModuleInterop": true
+        "lib": [
+            "ES2021",
+            "dom"
+        ],
+        "declaration": true
     },
     "exclude": [
         "dist",
-        "node_modules",
+        "node_modules"
     ]
 }
