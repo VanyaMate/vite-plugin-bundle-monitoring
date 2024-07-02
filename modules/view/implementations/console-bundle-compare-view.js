@@ -68,7 +68,7 @@ var ConsoleBundleCompareView = /** @class */ (function () {
         console.log("\u001B[0m%s", "".concat(this._headerFiller.repeat(leftSide)).concat(' '.repeat(leftSpace)).concat(title).concat(' '.repeat(rightSpace)).concat(this._headerFiller.repeat(rightSide)));
     };
     ConsoleBundleCompareView.prototype._finish = function () {
-        console.log("\u001B[0m%s", this._headerFiller.repeat(this._headerSpace));
+        console.log("\u001B[0m%s", this._headerFiller.repeat(this._headerLength));
     };
     ConsoleBundleCompareView.prototype._item = function (data) {
         return data.toString().slice(0, this._itemWidth - this._itemSpace).padEnd(this._itemWidth);

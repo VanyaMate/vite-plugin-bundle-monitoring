@@ -114,7 +114,7 @@ export class ConsoleBundleCompareView implements IBundleCompareView {
     }
 
     private _finish (): void {
-        console.log(`\x1b[0m%s`, this._headerFiller.repeat(this._headerSpace));
+        console.log(`\x1b[0m%s`, this._headerFiller.repeat(this._headerLength));
     }
 
     private _item (data: any): string {
