@@ -41,6 +41,8 @@ export class ConsoleBundleCompareView implements IBundleCompareView {
         this._header('New files');
         this._renderChangedHeader();
         this._renderNew(result.newFiles);
+
+        this._finish();
     }
 
     private _renderCompare (compared: BundleCompareResults): void {
@@ -109,6 +111,10 @@ export class ConsoleBundleCompareView implements IBundleCompareView {
             `\x1b[0m%s`,
             `${ this._headerFiller.repeat(leftSide) }${ ' '.repeat(leftSpace) }${ title }${ ' '.repeat(rightSpace) }${ this._headerFiller.repeat(rightSide) }`,
         );
+    }
+
+    private _finish (): void {
+        console.log(`\x1b[0m%s`, this._headerFiller.repeat(this._headerSpace));
     }
 
     private _item (data: any): string {
