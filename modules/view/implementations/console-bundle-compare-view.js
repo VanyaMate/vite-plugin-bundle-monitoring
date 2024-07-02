@@ -52,7 +52,7 @@ var ConsoleBundleCompareView = /** @class */ (function () {
     ConsoleBundleCompareView.prototype._renderChangedItem = function (name, item) {
         console.log("\u001B[0m%s\u001B[36m%s\u001B[34m%s\u001B[".concat(item.previousSize >= item.currentSize
             ? '32'
-            : '31', "m%s\u001B[").concat(item.deltaPercent > 0
+            : '31', "m%s\u001B[").concat(item.deltaPercent <= 0
             ? '32'
             : '31', "m%s"), "".concat(this._item(name)), "".concat(this._item("".concat(item.previousSize, " kb"))), "".concat(this._item("".concat(item.currentSize, " kb"))), "".concat(this._item("".concat(item.delta, " kb"))), "".concat(this._item("".concat(item.deltaPercent, " %"))));
     };

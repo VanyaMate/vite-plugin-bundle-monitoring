@@ -80,7 +80,7 @@ export class ConsoleBundleCompareView implements IBundleCompareView {
         console.log(
             `\x1b[0m%s\x1b[36m%s\x1b[34m%s\x1b[${ item.previousSize >= item.currentSize
                                                   ? '32'
-                                                  : '31' }m%s\x1b[${ item.deltaPercent > 0
+                                                  : '31' }m%s\x1b[${ item.deltaPercent <= 0
                                                                      ? '32'
                                                                      : '31' }m%s`,
             `${ this._item(name) }`,
