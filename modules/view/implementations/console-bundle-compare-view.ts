@@ -84,9 +84,9 @@ export class ConsoleBundleCompareView implements IBundleCompareView {
                                                                      ? '32'
                                                                      : '31' }m%s`,
             `${ this._item(name) }`,
-            `${ this._item(`${ item.previousSize } kb`) }`,
-            `${ this._item(`${ item.currentSize } kb`) }`,
-            `${ this._item(`${ item.delta } kb`) }`,
+            `${ this._item(`${ item.previousSize } b`) }`,
+            `${ this._item(`${ item.currentSize } b`) }`,
+            `${ this._item(`${ item.delta } b`) }`,
             `${ this._item(`${ item.deltaPercent } %`) }`,
         );
     }
@@ -95,7 +95,7 @@ export class ConsoleBundleCompareView implements IBundleCompareView {
         console.log(
             `\x1b[36m%s\x1b[36m%s`,
             `${ this._item(name) }`,
-            `${ this._item(`${ size } kb`) }`,
+            `${ this._item(`${ size } b`) }`,
         );
     }
 

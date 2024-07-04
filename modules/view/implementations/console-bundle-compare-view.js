@@ -54,10 +54,10 @@ var ConsoleBundleCompareView = /** @class */ (function () {
             ? '32'
             : '31', "m%s\u001B[").concat(item.deltaPercent <= 0
             ? '32'
-            : '31', "m%s"), "".concat(this._item(name)), "".concat(this._item("".concat(item.previousSize, " kb"))), "".concat(this._item("".concat(item.currentSize, " kb"))), "".concat(this._item("".concat(item.delta, " kb"))), "".concat(this._item("".concat(item.deltaPercent, " %"))));
+            : '31', "m%s"), "".concat(this._item(name)), "".concat(this._item("".concat(item.previousSize, " b"))), "".concat(this._item("".concat(item.currentSize, " b"))), "".concat(this._item("".concat(item.delta, " b"))), "".concat(this._item("".concat(item.deltaPercent, " %"))));
     };
     ConsoleBundleCompareView.prototype._renderNewItem = function (name, size) {
-        console.log("\u001B[36m%s\u001B[36m%s", "".concat(this._item(name)), "".concat(this._item("".concat(size, " kb"))));
+        console.log("\u001B[36m%s\u001B[36m%s", "".concat(this._item(name)), "".concat(this._item("".concat(size, " b"))));
     };
     ConsoleBundleCompareView.prototype._header = function (title) {
         var titleLength = title.length + this._headerSpace;
